@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map:map xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:map="map"
+    xsi:schemaLocation="map test.ecore"
+    name="montpellier">
+  <spaces xsi:type="map:Square"
+      name="21"
+      borderedBy="//@roads.1 //@roads.2 //@roads.3"/>
+  <spaces xsi:type="map:Garden"
+      name="bois de boulogne"
+      borderedBy="//@roads.1 //@roads.3"/>
+  <roads xsi:type="map:Street"
+      name="rue tranquille"
+      meet="//@roads.0"/>
+  <roads xsi:type="map:Street"
+      name="centrale"
+      border="//@spaces.0 //@spaces.1"
+      meet="//@roads.0"/>
+  <roads xsi:type="map:Pedestrian"
+      name="rue pietonne"
+      lenght="2000"
+      border="//@spaces.0"
+      meet="//@roads.0"/>
+  <roads xsi:type="map:Pedestrian"
+      name="pedestrian street"
+      lenght="1200"
+      border="//@spaces.0 //@spaces.1"
+      meet="//@roads.1"/>
+</map:map>
